@@ -70,6 +70,16 @@ public class WorkerController {
         }
     }
 
-
+/***wyd add start 0905***/
+@GetMapping("/update")
+    public String updateWorker(Worker worker){
+        int no = ws.update(worker);
+        if(no > 0){
+            return  "redirect:/getall";
+        }else{
+            return null;
+        }
+    }
+    /***wyd add end 0905***/
 
 }
